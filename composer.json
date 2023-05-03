@@ -1,6 +1,6 @@
 {
-    "name": "takeoto/state",
-    "description": "Abstraction for the state of system processes.",
+    "name": "takeoto/message",
+    "description": "Abstraction for system messages.",
     "type": "library",
     "keywords": ["takeoto", "message", "abstraction", "php"],
     "license": "MIT",
