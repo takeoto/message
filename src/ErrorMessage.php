@@ -11,11 +11,11 @@ class ErrorMessage extends Message implements ErrorMessageInterface
     private string $code;
 
     /**
-     * @param string $code
+     * @param string|int $code
      * @param string $template
      * @param array<string,mixed> $variables
      */
-    public function __construct(string $code, string $template, array $variables = [])
+    public function __construct(string|int $code, string $template, array $variables = [])
     {
         $this->code = $code;
         parent::__construct($template, $variables);
@@ -24,7 +24,7 @@ class ErrorMessage extends Message implements ErrorMessageInterface
     /**
      * @inheritDoc
      */
-    public function getCode(): string
+    public function getCode()
     {
         return $this->code;
     }

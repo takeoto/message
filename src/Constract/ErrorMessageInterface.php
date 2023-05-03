@@ -7,7 +7,7 @@ interface ErrorMessageInterface extends MessageInterface
     /**
      * Gets the error code.
      *
-     * @return string
+     * @return string|int
      */
-    public function getCode(): string;
+    public function getCode();
 }
