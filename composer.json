@@ -1,0 +1,21 @@
+{
+    "name": "takeoto/state",
+    "description": "Abstraction for the state of system processes.",
+    "type": "library",
+    "keywords": ["takeoto", "message", "abstraction", "php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladysalv Vernyhora",
+            "homepage": "vladyslav.vernyhora@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Takeoto\\Message\\": "src/"
+        }
+    }
+}
