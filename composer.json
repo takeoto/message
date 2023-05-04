@@ -2,7 +2,7 @@
     "name": "takeoto/message",
     "description": "Abstraction for system messages.",
     "type": "library",
-    "keywords": ["takeoto", "message", "abstraction", "php"],
+    "keywords": ["takeoto", "message", "error", "warning", "notice", "abstraction", "php"],
     "license": "MIT",
     "authors": [
         {
