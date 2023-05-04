@@ -13,8 +13,8 @@ echo $message; # Hello World!
 
 # --- The message with template variables --------
 
-$message = new Message('Hello {{ platen }}!', [
-    '{{ platen }}' => 'Mars 👽',
+$message = new Message('Hello {{ planet }}!', [
+    '{{ planet }}' => 'Mars 👽',
 ]);
 echo $message; # Hello Mars 👽!"
 
