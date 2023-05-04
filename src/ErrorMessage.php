@@ -8,14 +8,17 @@ use Takeoto\Message\Contract\ErrorMessageInterface;
 
 class ErrorMessage extends Message implements ErrorMessageInterface
 {
-    private string $code;
+    /**
+     * @var int|string
+     */
+    private $code;
 
     /**
      * @param string|int $code
      * @param string $template
      * @param array<string,mixed> $variables
      */
-    public function __construct(string|int $code, string $template, array $variables = [])
+    public function __construct($code, string $template, array $variables = [])
     {
         $this->code = $code;
         parent::__construct($template, $variables);
