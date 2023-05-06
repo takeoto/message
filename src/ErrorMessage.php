@@ -17,11 +17,12 @@ class ErrorMessage extends Message implements ErrorMessageInterface
      * @param string|int $code
      * @param string $template
      * @param array<string,mixed> $variables
+     * @param \Closure(mixed $value, string $placeholder):string|null $normalizer
      */
-    public function __construct($code, string $template, array $variables = [])
+    public function __construct($code, string $template, array $variables = [], \Closure $normalizer = null)
     {
         $this->code = $code;
-        parent::__construct($template, $variables);
+        parent::__construct($template, $variables, $normalizer);
     }
 
     /**

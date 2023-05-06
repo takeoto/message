@@ -9,6 +9,7 @@ use Takeoto\Message\Contract\MessageInterface;
 use Takeoto\Message\Contract\MessagesCollectionInterface;
 use Takeoto\Message\Contract\NoticeMessageInterface;
 use Takeoto\Message\Contract\WarningMessageInterface;
+use Takeoto\Message\Utility\MessageUtility;
 
 /**
  * @template TKey
@@ -100,7 +101,11 @@ class MessagesCollection implements MessagesCollectionInterface
                     break;
                 default:
                     throw new \InvalidArgumentException(
-                        sprintf('Message object must implement "%s" interface', MessageInterface::class)
+                        sprintf(
+                            'Message object must implement "%s" interface. %s given',
+                            MessageInterface::class,
+                            MessageUtility::formatValue($message),
+                        )
                     );
             }
         }
