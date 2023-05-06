@@ -4,6 +4,7 @@
     "type": "library",
     "keywords": ["takeoto", "message", "error", "warning", "notice", "abstraction", "php"],
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Vladysalv Vernyhora",
