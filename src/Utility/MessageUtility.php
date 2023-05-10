@@ -15,9 +15,11 @@ class MessageUtility
     {
         switch (true) {
             case \is_object($value):
-                return $detailed
-                    ? 'object{' . serialize($value) . '}'
-                    : 'object';
+                if (!$detailed) {
+                    return 'object';
+                }
+
+                return method_exists($value, '__toString') ? (string)$value : 'object{' . serialize($value) . '}';
             case \is_array($value):
                 return $detailed && array_walk(
                     $value,
